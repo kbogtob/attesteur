@@ -10,4 +10,7 @@ gem 'foreman'
 group :development do
   gem 'byebug'
   gem 'dotenv'
+
+  gem 'rspec'
+  gem 'rspec-its'
 end

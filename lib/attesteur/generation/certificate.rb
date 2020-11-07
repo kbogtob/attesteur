@@ -18,14 +18,13 @@ module Attesteur
       end
 
       def pdf_upload_io
-        Faraday::UploadIO.new(pdf, 'application/pdf', "#{name}.pdf")
+        Faraday::UploadIO.new(pdf, 'application/pdf', pdf_name)
       end
 
       def qr_code_upload_io
-        Faraday::UploadIO.new(qr_code, 'image/png', "#{name}.png")
+        Faraday::UploadIO.new(qr_code, 'image/png', qr_code_name)
       end
 
-      private
       attr_reader :name
       attr_reader :pdf
       attr_reader :qr_code

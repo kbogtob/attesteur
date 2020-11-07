@@ -11,11 +11,21 @@ module Attesteur
     def initialize(id, infos = {})
       @id = id
       @infos = infos
+      @greeted = false
       @subscribing = false
     end
 
     def fill(field, value)
       infos[field] = value.strip
+      @subscribing = false if subscribed?
+    end
+
+    def greeted?
+      @greeted
+    end
+
+    def greet!
+      @greeted = true
     end
 
     def subscribing?
@@ -28,10 +38,6 @@ module Attesteur
 
     def subscribed?
       missing_fields.empty?
-    end
-
-    def empty?
-      infos.empty?
     end
 
     def next_missing_field

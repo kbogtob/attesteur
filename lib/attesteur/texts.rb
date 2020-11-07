@@ -16,6 +16,7 @@ module Attesteur
     REASON_SCHOOL = "Pour emmener les enfants à l'école 👶"
 
     GENERATING = "Ok je vous génère une attestation..."
+    BYE = "Faites moi signe si vous voulez une nouvelle attestation."
     HELP_ME = "Autres options"
     HELP = "Vous pouvez taper /forget pour vous faire oublier."
     FORGETING = "Ok je vous oublie..."

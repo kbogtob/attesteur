@@ -1,1 +1,1 @@
-bot: bundle exec dotenv ruby bin/bot.rb
+bot: bundle exec ruby bin/bot
