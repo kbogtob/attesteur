@@ -1,0 +1,13 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+$LOAD_PATH.unshift(File.join(File.dirname(__FILE__), '..', 'lib'))
+
+require 'attesteur'
+
+unless token = ENV["TELEGRAM_BOT_TOKEN"]
+  $stderr.puts "TELEGRAM_BOT_TOKEN env variable not provided"
+  exit 1
+end
+
+Attesteur::Cli.new(token).start
