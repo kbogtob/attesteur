@@ -1,0 +1,7 @@
+Cree le: <%= @time.strftime("%d/%m/%Y") %> a <%= @time.strftime("%H:%M") %>;
+Nom: <%= @infos["first_name"] %>;
+Prenom: <%= @infos["last_name"] %>;
+Naissance: <%= @infos["birth_date"] %> a <%= @infos["birth_place"] %>;
+Adresse: <%= @infos["address"] %> <%= @infos["zipcode"] %> <%= @infos["town"] %>;
+Sortie: <%= @time.strftime("%d/%m/%Y") %> a <%= @time.strftime("%H:%M") %>;
+Motifs: <%= @motivation %>
