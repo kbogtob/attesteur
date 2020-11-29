@@ -23,7 +23,7 @@ module Attesteur
 
       def build_pdf(erb_engine)
         Prawn::Document.new.tap do |pdf|
-          pdf.text(erb_engine.template(attestation_erb))
+          pdf.text(erb_engine.template(attestation_erb), align: :justify)
         end.render
       rescue Prawn::Errors::IncompatibleStringEncoding => e
         Prawn::Document.new.tap do |pdf|
